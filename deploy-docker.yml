@@ -1,4 +1,3 @@
----
 - hosts: dev
   become: True
   tasks:
@@ -21,8 +20,8 @@
         state: present
     - name: Start the container
       docker_container:
-        name: athulapp
-        image: "athulj07/myapp:001}"
+        name: athulapp1
+        image: "athulj07/myapp:002}"
         state: started
-        published_ports:
+        published_ports: 
           - 0.0.0.0:8080:8080
